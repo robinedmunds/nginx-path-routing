@@ -5,6 +5,8 @@ services:
     volumes:
       - ./html/root:/usr/share/nginx/html:ro
       - ./nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
+    ports:
+      - "5050:80"
 
   alpha:
     image: nginx:alpine

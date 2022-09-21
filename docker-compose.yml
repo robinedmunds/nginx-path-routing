@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  root:
+    image: nginx:alpine
+    volumes:
+      - ./html/root:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf:ro
+
+  alpha:
+    image: nginx:alpine
+    volumes:
+      - ./html/alpha:/usr/share/nginx/html:ro
+
+  bravo:
+    image: nginx:alpine
+    volumes:
+      - ./html/bravo:/usr/share/nginx/html:ro
+
+  charlie:
+    image: nginx:alpine
+    volumes:
+      - ./html/charlie:/usr/share/nginx/html:ro
+
